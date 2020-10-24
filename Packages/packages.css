@@ -1,5 +1,6 @@
 main{
     padding-top: 32px;
+    margin-top: 25px;
     
 }
 
@@ -18,6 +19,8 @@ main{
     width: 80%;
     padding: 32px 32px;
     position: relative;
+    border-left: none;
+    
 }
 
 
@@ -47,6 +50,7 @@ main{
     color: white;
     background-color: #ff5454;
     padding: 8px;
+   
 }
 
 .package__info{
@@ -63,6 +67,7 @@ main{
 
 #plus{
     background-color: rgba(213, 255, 220, 0.95);
+    
 }
 
 #free{
