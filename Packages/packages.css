@@ -1,6 +1,6 @@
 main{
-    padding-top: 32px;
-    margin-top: 25px;
+    padding-top: 2rem;
+    margin-top: 2rem;
     
 }
 
@@ -8,17 +8,17 @@ main{
     background: url("../images/plans-background.jpg") center/cover;
     filter: grayscale(30%);
     position: fixed;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     z-index: -1;
 }
 
 .package{
     border:4px solid #0e4f1f;
-    margin: 16px 0;
+    margin: 3rem 0;
     box-sizing: border-box;
     width: 80%;
-    padding: 32px 32px;
+    padding: 2rem 2rem;
     position: relative;
     border-left: none;
     
@@ -35,7 +35,7 @@ main{
     text-decoration: none;
     color: inherit;
     display: block;
-    padding: 32px;
+    padding: 2rem;
 }
 
 .package__subtitle{
@@ -46,19 +46,19 @@ main{
     position: absolute;
     top: 0;
     right: 0px;
-    margin: 20px;
-    font-size: 12px;
+    margin: 1.25rem;
+    font-size: 0.75rem;
     color: white;
     background-color: #ff5454;
-    padding: 8px;
+    padding: 0.5rem;
    
 }
 
 .package__info{
     border: 1px solid darkgreen;
     background: white;
-    padding: 16px;
-    font-size: 20px;
+    padding: 1rem;
+    font-size: 1.25rem;
     color:darkgreen;
 }
 
