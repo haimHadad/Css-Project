@@ -19,19 +19,24 @@ selectPlanButtons.forEach(element =>{
 
 });
 
-[backdrop,modalNoButton].forEach(element=>{
-    element.addEventListener('click',()=>{
+
+backdrop.addEventListener('click',()=>{
         /* mobileNav.style.display='none'; */
         mobileNav.classList.remove('open');
         closeModal();
-    });
 });
+
+if(modalNoButton){
+    modalNoButton.addEventListener('click',closeModal);
+}
+
 
 function closeModal(){
     /* backdrop.style.display ='none';
     modal.style.display = 'none'; */
     backdrop.classList.remove('open');
-    modal.classList.remove('open');
+    if(modal)
+        modal.classList.remove('open');
 }
 
 toggleButton.addEventListener('click',()=>{
