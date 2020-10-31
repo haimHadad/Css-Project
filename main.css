@@ -1,7 +1,7 @@
 
 
 #product-overview{
-    background: linear-gradient( to top, rgba(80,68,18,0.6) 10%, transparent) ,url("./images/freedom.jpg") left 10% bottom 70%/cover no-repeat border-box padding-box, #ff1b68;
+    background: linear-gradient( to top, rgba(80,68,18,0.6) 10%, transparent) ,url("./images/freedom.jpg") center/cover no-repeat border-box padding-box, #ff1b68;
     /* background-size: cover;
     background-position:left 10% bottom 50%;
     background-repeat: no-repeat;
@@ -10,7 +10,7 @@
     background-attachment: fixed; */
     /* background-image: linear-gradient(red,blue); */
     width: 100vw;
-    height: 50vh;
+    height: 33vh;
     /* padding: 10px; */
     margin-top: 43px;
     position: relative;
@@ -19,41 +19,47 @@
 #product-overview h1{
     position: absolute;
     bottom:1%;
-    left: 3%;
+    left: 2%;
+    color: white;
+    font-family: 'Anton', sans-serif;
+    font-size: 1.6rem;
 }
+
+@media(min-width: 40rem) and (min-height: 50rem){
+    #product-overview{
+        height: 65vh;
+        background-position: 50% 25%;
+ }
+
+
+    #product-overview h1{
+        font-size: 3rem;  
+    } 
+}
+
+
 
 .section-title {
     color: #2ddf5c;
     text-align: center;
 }
 
-#product-overview h1 {
-    color: white;
-    font-size: 30px;
-    font-family: 'Anton', sans-serif;
-}
 
-.plan__list{
-    width: 80%; 
-    margin: auto;
-    text-align: center;
-}
+
 
 .plan{
     background-color: lightgreen;
     text-align: center;
-    padding: 16px;
-    margin: 8px;
-    display: inline-block;
-    width: 30%;
-    vertical-align: middle;
+    padding: 1rem;
+    margin: 0.5rem 0;
+    display: block;
+    width: 100%;
 }
 
 .plan--highlighted{
     background-color: #179c41;
     color: white;
-    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
-    
+
 }
 
 .plan__annotation{
@@ -87,21 +93,38 @@
 }
 
 .plan__feature{
-    margin: 8px 0;
+    margin: 0.5rem 0;
 }
 
+@media(min-width: 40rem){
+    .plan{
+        display: inline-block;
+        width: 30%;
+        vertical-align: middle;
+        min-width: 13rem;
+        max-width: 25rem;
+    }
 
+    .plan__list{
+        width: 100%;
+        text-align: center;
+    }
+
+    .plan--highlighted{
+        box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+    }
+}
 
 #key-features{
     background-color: #ff1b68;
-    margin-top: 80px;
-    padding: 16px;
+    margin-top: 5rem;
+    padding: 1rem;
     
 }
 
 #key-features .section-title{
     color: white;
-    margin: 32px;
+    margin: 2rem;
 }
 
 .key-feature__list{
@@ -111,29 +134,45 @@
     text-align: center;
 }
 
-.key-feature{
-    display: inline-block;
-    width: 30%;
-    vertical-align: top;
-    
-}
+
 
 .key-feature__image{
     background: #ffcede;
-    width: 128px;
-    height: 128px;
+    width: 6rem;
+    height: 6rem;
     border: 2px solid #424242;
     border-radius: 50%;
     margin: auto;
-    padding: 1.3rem;
+    padding: 1.1rem;
 }
 
 .key-feature__description{
     text-align: center;
     color: white;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 1.25rem;
 }
+
+
+
+@media(min-width:40rem){
+    .key-feature{
+        display: inline-block;
+        width: 30%;
+        vertical-align: top;
+        max-width: 25rem;
+    }
+
+    .key-feature__image{
+        width: 8rem;
+        height: 8rem;
+        padding: 1.4rem;
+    }
+
+}
+
+
+    
 
 
 .modal {
