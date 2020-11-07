@@ -1,3 +1,17 @@
+@font-face{
+    font-family: "AnonymousPro";
+    src:url("anonymousPro-Regular.ttf") format("truetype");
+    
+}
+
+@font-face{
+    font-family: "AnonymousPro";
+    src:url("anonymousPro-Bold.ttf") format("truetype");
+    font-weight: 700;
+
+}
+
+
 main{
     padding-top: 2rem;
     margin-top: 2rem;
@@ -58,8 +72,9 @@ main{
     border: 1px solid darkgreen;
     background: white;
     padding: 1rem;
-    font-size: 1.25rem;
     color:darkgreen;
+    font-size: 1.25rem "AnonymousPro", "sans-serif";
+    /*font-style font-variant font-weight font-size/line-height font-family*/
 }
 
 .clearfix{
