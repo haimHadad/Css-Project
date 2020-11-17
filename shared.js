@@ -5,6 +5,8 @@ var selectPlanButtons = document.querySelectorAll(".plan button");
 var toggleButton = document.querySelector(".toggle-button");
 var mobileNav = document.querySelector(".mobile-nav");
 var ctaButton = document.querySelector(".main-nav__item--cta");
+var ctaButton = document.querySelector(".main-nav__item--cta");
+var upScrl = document.querySelector(".upScroll");
 
 // console.dir(backdrop.style['background-image']);
 
@@ -54,7 +56,7 @@ toggleButton.addEventListener("click", function() {
   }, 10);
 });
 
-ctaButton.addEventListener('animationstart', (event)=>{
+/* ctaButton.addEventListener('animationstart', (event)=>{
   console.log('Animation started',event);
 });
 
@@ -64,4 +66,52 @@ ctaButton.addEventListener('animationend', (event)=>{
 
 ctaButton.addEventListener('animationiteration', (event)=>{
   console.log('Animation iteration',event);
-});
+}); */
+
+
+const smoothScroll = (target, duration)=>{
+  var target = document.querySelector(target);
+  var targetPosition = target.getBoundingClientRect().top;
+  var startPosition = window.pageYOffset;
+  var distance = targetPosition - startPosition;
+  var startTime = null;
+
+  const animation = (currentTime)=>{
+    if(startTime ===null) startTime = currentTime;
+    var timeElapsed = currentTime - startTime;
+    var run = ease(timeElapsed, startPosition, distance, duration);
+    window.scrollTo(0, run);
+    if(timeElapsed < duration) requestAnimationFrame(animation);
+  }
+
+  const ease = (t, b, c, d) =>{
+    t /= d / 2;
+    if(t<1) return c / 2 * t * t + b;
+    t--;
+    return -c / 2 * (t * (t - 2) - 1) + b
+  }
+
+  requestAnimationFrame(animation);
+}
+
+
+
+upScrl.addEventListener('click',()=>{
+  smoothScroll('.main-header',1000);
+  upScrl.style.display = 'none';
+})
+
+window.addEventListener('wheel', (event)=>{
+  var target = document.querySelector('.main-header');
+  var targetPosition = target.getBoundingClientRect().top;
+  var startPosition = window.pageYOffset;
+  var distance = targetPosition - startPosition;
+  console.log(startPosition);
+  if(startPosition>0){
+    upScrl.style.display = 'block';
+  }
+  else{
+    upScrl.style.display = 'none';
+  }
+  
+})
