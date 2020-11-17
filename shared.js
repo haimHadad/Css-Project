@@ -101,7 +101,7 @@ upScrl.addEventListener('click',()=>{
   upScrl.style.display = 'none';
 })
 
-window.addEventListener('wheel', (event)=>{
+/* window.addEventListener('wheel', (event)=>{
   var target = document.querySelector('.main-header');
   var targetPosition = target.getBoundingClientRect().top;
   var startPosition = window.pageYOffset;
@@ -114,4 +114,14 @@ window.addEventListener('wheel', (event)=>{
     upScrl.style.display = 'none';
   }
   
-})
+}) */
+
+window.onscroll = function() {myFunction()};
+
+myFunction = () => {
+  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+    upScrl.style.display = 'block';
+  } else {
+    upScrl.style.display = 'none';
+  }
+}
